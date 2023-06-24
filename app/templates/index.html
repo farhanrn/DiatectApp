@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>DiatectApp</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/style.css' ) }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/contact us style.css' ) }} type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="menu">
+			<div class="logo">
+				<img src={{ url_for('static', filename='/images/diabetes.png' ) }} alt="Logo Aplikasi" width="50" height="50"
+					align="left">
+				<a class="navbar-brand" href="#halamanku">DiatectApp</a>
+			</div>
+			<ul>
+				<li><a href="#home">HOME</a></li>
+				<li><a href="#informasi">ABOUT APPLICATION</a></li>
+				<li><a href="#aboutus">ABOUT US</a></li>
+				<li><a href="#contactus">CONTACT US</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Home) -->
+	<div id="home">
+		<div class="img">
+			<div align="center">
+				<img src={{ url_for('static', filename='/images/diabetes_home.jpg' ) }} height="730" width="1520"></img>
+			</div>
+		</div>
+		<div class="center">
+			<div class="title">D I A T E C T A P P</div>
+			<div class="sub_title">Diabetes Disease Detection Application</div>
+			<!-- Tombol Mulai -->
+			<nav class="navbar">
+				<!-- <ul class="nav nav-pills"> -->
+				<ul class="nav-item">
+					<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#D14D37;">Mulai</a>
+				</ul>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<div class="row">
+
+			<div class="col-sm-12">
+				<br>
+				<br>
+			</div>
+
+			<div class="col-sm-12">
+				<div align="center">
+					<h2>Selamat datang di DiatectApp!!</h2>
+					<p style="text-align: justify;text-justify: inter-word;">
+						Aplikasi ini dibuat untuk mendeteksi/memprediksi keberadaan penyakit diabetes pada tubuh seseorang.
+						Aplikasi ini akan menerima inputan berupa data pasien yaitu nama, umur, jenis kelamin, jumlah kehamilan, kadar gula, tekanan darah, ketebalan kulit,
+						kadar insulin, index masa tubuh dan ukuran keberadaan diabates yang didapatkan dari riwayat keluarga, yang kemudian 
+						dari inputan-inpiutan tersebut, aplikasi akan mendeteksi keberadaan diabetes
+						dengan menampilkan hasil prediksi yaitu "Diabetes terdeteksi" atau "Diabetes tidak terdeteksi".
+						Aplikasi ini dibentuk dengan manfaat agar orang-orang yang ingin mengecek kesehatan tubuhnya khususnya penyakit diabetes dapat secara mandiri
+						mengecek keberadaan diabetes dengan melibatkan informasi yang mungkin sudah didapatkan sebelumnya dari rumah sakit tanpa harus pergi ke rumah sakit, 
+						yang mana ini diharapkan agar penanganan diabetes menjadi lebih cepat sehingga penyakit ini tidak berubah menjadi lebih parah.
+					</p>
+					<br>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+	
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				</br>
+				<!-- Input Nilai Pengukuran dari Pengguna -->
+				<h3 style="margin-left: 50px;">Input Data Pasien</h3>
+				<form>
+					<div class="form-group" style="margin-left: 50px;">
+						<label for="name">Nama</label>
+						<br>
+						<form>
+							<input type="text" placeholder="Masukan nama anda">
+						</form>
+						<br>
+						<br>
+						<label for="gender">Jenis Kelamin</label>
+						<br>
+						<select>
+							<option value="Laki-Laki">Laki-Laki</option>
+							<option value="Perempuan">Perempuan</option>
+						</select>
+					
+						<br>
+						<br>
+						<label for="range_age">Umur</label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_age">70.0<!-- Default value --></span>
+						<input type="range" min="0.0" max="100.0" step="1" value="70.0" class="slider" id="range_age" 
+						onInput="$('#rangeVal_age').html($(this).val())">
+						</br>
+						<label for="range_pregnancies">Jumlah Kehamilan </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_pregnancies">6.0<!-- Default value --></span>
+						<input type="range" min="0" max="20" step="1" value="6" class="slider" id="range_pregnancies" 
+						onInput="$('#rangeVal_pregnancies').html($(this).val())">
+						</br>
+						<label for="range_glucose">Kadar Gula Darah (mg/dL)</label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_glucose">148.0<!-- Default value --></span>
+						<input type="range" min="0.0" max="160.0" step="1" value="148.0" class="slider" id="range_glucose" 
+						onInput="$('#rangeVal_glucose').html($(this).val())">
+						</br>
+						<label for="range_blood_pressure">Tekanan Darah (mm/Hg) </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_blood_pressure">80.0<!-- Default value --></span>
+						<input type="range" min="0.0" max="150.0" step="1" value="80.0" class="slider" id="range_blood_pressure" 
+						onInput="$('#rangeVal_blood_pressure').html($(this).val())">
+						</br>
+						<label for="range_skin_thickness">Ketebalan Kulit (mm)</label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_skin_thickness">35.0<!-- Default value --></span>
+						<input type="range" min="0.0" max="100.0" step="1" value="35.0" class="slider" id="range_skin_thickness" 
+						onInput="$('#rangeVal_skin_thickness').html($(this).val())">
+						</br>
+						<label for="range_insulin">Kadar Insulin</label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_insulin">78.0<!-- Default value --></span>
+						<input type="range" min="0.0" max="160.0" step="1" value="78.0" class="slider" id="range_insulin" 
+						onInput="$('#rangeVal_insulin').html($(this).val())">
+						</br>
+						<label for="range_bmi">Index Massa Tubuh atau Body Mass Index</label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_bmi">1.2<!-- Default value --></span>
+						<input type="range" min="0.0" max="100.0" step="0.1" value="1.2" class="slider" id="range_bmi" 
+						onInput="$('#rangeVal_bmi').html($(this).val())">
+						</br>
+						<label for="range_diabetes_pedigree_function">Ukuran ada tidaknya diabetes berdasarkan riwayat keluarga</label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_diabetes_pedigree_function">0.167<!-- Default value --></span>
+						<input type="range" min="0.000" max="2.000" step="0.001" value="0.167" class="slider" id="range_diabetes_pedigree_function" 
+						onInput="$('#rangeVal_diabetes_pedigree_function').html($(this).val())">
+						</br>
+						<!-- Tombol Prediksi -->
+						<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<!-- Bagian Halaman untuk Hasil Prediksi -->
+				<div id="hasil_prediksi" align="center">
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="aboutus" class="container-fluid text-center">
+		<br>
+		<h2>ABOUT US</h2>
+		<h4>P R O T E G O</h4>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+					<div align="center">
+						<img src={{ url_for('static', filename='/images/yoga.jpeg' ) }} height="100" width="150"></img>
+					</div>
+				<h4>GUSTI KETUT ADI TRIYOGA PUTRA</h4>
+				<p>Universitas Udayana</p>
+				<p>aditriyoga_</p>
+				<p>gustiaditriyoga27@gmail.com</p>
+			</div>
+			<div class="col-sm-4">
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<div align="center">
+					<img src={{ url_for('static', filename='/images/farhan.jpg' ) }} height="100" width="100"></img>
+				</div>
+				<h4>FARHAN RAHMAN</h4>
+				<p>Politenik Negeri Ujung Pandang</p>
+				<p>@farhanrn_</p>
+				<p>farhanrahman0601@gmail.com</p>
+			</div>
+			<div class="col-sm-4">
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<div align="center">
+					<img src={{ url_for('static', filename='/images/Gung Gabeng.jpeg' ) }} height="100" width="100"></img>
+				</div>
+				<h4>GUSTI MADE WIJAYA KUSUMA</h4>
+				<p>Universitas Udayana</p>
+				<p>@gung_gabeng</p>
+				<p>gunggabeng09@gmail.com</p>
+			</div>
+		</div>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-6">
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<div align="center">
+					<img src={{ url_for('static', filename='/images/nia.png' ) }} height="100" width="100"></img>
+				</div>
+				<h4>STEPHANIA GETRUDIS INACONTA SADIPUN</h4>
+				<p>Universitas Udayana</p>
+				<p>@niasadipun</p>
+				<p>sadipunnia@gmail.com</p>
+			</div>
+			<div class="col-sm-6">
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<div align="center">
+					<img src={{ url_for('static', filename='/images/tiara.jpeg' ) }} height="100" width="100"></img>
+				</div>
+				<h4>TIARA AULIYA PUTRI</h4>
+				<p>Universitas Udayana</p>
+				<p>@tiaraauliyap</p>
+				<p>tiaraauliyap@gmail.com</p>
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- Bagian Halaman Hubungi Kami -->
+	<div id="contactus" class="container-fluid text-center">
+		<br>
+		<h2>CONTACT US</h2>
+		<div class="row slideanim"></div>
+		<div class="container">
+			<div class="card-container">
+				<div class="right">
+					<div class="right-container">
+						<form action="">
+							<input type="text" placeholder="Nama">
+							<input type="email" placeholder="Alamat Email">
+							<input type="text" placeholder="Perusahaan" autocomplete="off">
+							<input type="phone" placeholder="Telepon" autocomplete="off">
+							<textarea rows="10" placeholder="Pesan"></textarea>
+							<button>Kirim</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<br>
+	</div>
+
+	<!-- Footer -->
+	<div class="footer-container">
+		<footer class="container-fluid text-center">
+			<a href="#halamanku" title="To Top">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</a>
+			<p>Orbit Future Academy<br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+		</footer>
+	</div>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script src={{ url_for('static', filename='/js/client_side.js' ) }}></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

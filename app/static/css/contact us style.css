@@ -1,0 +1,153 @@
+.right {
+    display: flex;
+    flex: 1;
+    height: 460px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex: 1;
+    height: 522px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+.left-container {
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    line-height: 22px
+}
+
+.left p {
+    font-size: 0.9rem;
+}
+
+/* h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+} */
+
+.right-container {
+    width: 70%;
+    height: 80%;
+    text-align: center;
+}
+
+input,
+textarea {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid #00b4cf;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #F86E51;
+    background-color: #F86E51;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-out;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+textarea {
+    height: 90px;
+    .right {
+        display: flex;
+        flex: 1;
+        height: 460px;
+        background-color: #ffffff;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left {
+        display: flex;
+        flex: 1;
+        height: 522px;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+    
+    
+    .left-container {
+        height: 50%;
+        width: 80%;
+        text-align: center;
+        line-height: 22px
+    }
+    
+    .left p {
+        font-size: 0.9rem;
+    }
+    
+    /* h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    } */
+    
+    .right-container {
+        width: 70%;
+        height: 80%;
+        text-align: center;
+    }
+    
+    input,
+    textarea {
+        background-color: #eee;
+        border: none;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 100%;
+        font-size: 100;
+    }
+    
+    input:focus,
+    textarea:focus {
+        outline: 1px solid #00b4cf;
+    }
+    
+    button {
+        border-radius: 20px;
+        border: 1px solid #F86E51;
+        background-color: #F86E51;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-out;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        opacity: 0.7;
+    }
+    
+    textarea {
+        height: 90px;
+    }
